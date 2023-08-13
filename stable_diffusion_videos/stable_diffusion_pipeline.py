@@ -851,16 +851,7 @@ class StableDiffusionWalkPipeline(DiffusionPipeline):
                 width=width,
                 upsample=upsample,
                 batch_size=batch_size,
-                T=get_timesteps_arr(
-                    audio_filepath,
-                    offset=audio_offset,
-                    duration=audio_duration,
-                    fps=fps,
-                    margin=margin,
-                    smooth=smooth,
-                )
-                if audio_filepath
-                else None,
+                T=None,
                 skip=skip,
                 negative_prompt=negative_prompt,
             )
